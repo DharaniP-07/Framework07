@@ -6,24 +6,22 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class MyAddressPage {
-	
-	//Declaration
+	// Declaration
 	@FindBy(xpath = "//button[text()='Add Address']")
 	private WebElement addAddressButton;
 	@FindBy(xpath = "//div[text()='successfully added']")
 	private WebElement successMessage;
-	
-	
-	//Initialization
+
+	// Initialization
 	public MyAddressPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	
-	//Utilization
+
+	// Utilization
 	public void clickAddAddress() {
 		addAddressButton.click();
 	}
-	
+
 	public String getSuccessMessage() {
 		return successMessage.getText();
 	}

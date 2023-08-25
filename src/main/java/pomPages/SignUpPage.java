@@ -35,8 +35,8 @@ public class SignUpPage {
 	}
 
 	// Utilization
-	public void createUserAccount(String firstName, String lastName, String expectedGender, String phonenumber,
-			String email, String password, String confirmpassword) {
+	public void createUserAccount(String firstName, String lastName, String expectedGender, String phoneNum,
+			String email, String password) {
 		firstNameTF.sendKeys(firstName);
 		lastNameTF.sendKeys(lastName);
 
@@ -46,12 +46,12 @@ public class SignUpPage {
 				element.click();
 				break;
 			}
-
 		}
-		phoneNumberTF.sendKeys(phonenumber);
+
+		phoneNumberTF.sendKeys(phoneNum);
 		emailAddressTF.sendKeys(email);
 		passwordTF.sendKeys(password);
-		confirmPasswordTF.sendKeys(confirmpassword);
+		confirmPasswordTF.sendKeys(password);
 		termsAndConditionsCB.click();
 		try {
 			Thread.sleep(3000);

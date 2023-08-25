@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import genericLibraries.WEbDriverUtility;
+import genericLibraries.WebDriverUtility;
 
 public class HomePage {
 
@@ -18,7 +18,7 @@ public class HomePage {
 	private WebElement logout;
 	@FindBy(xpath = "//a[text()='Electronic']")
 	private WebElement electronicTab;
-	@FindBy(xpath = "//span[text()='headphone']")
+	@FindBy(xpath = "//a[text()='Headphones']")
 	private WebElement headPhonesLink;
 
 	// Initialization
@@ -34,16 +34,17 @@ public class HomePage {
 	public void selectMyProfile() {
 		myProfile.click();
 	}
-	
+
 	public void clickLogout() {
 		logout.click();
 	}
-	
-	public void mouseHoverToElectronics(WEbDriverUtility web) {
+
+	public void mouseHoverToElectronic(WebDriverUtility web) {
 		web.mouseHover(electronicTab);
 	}
-	
+
 	public void clickHeadPhonesLink() {
 		headPhonesLink.click();
 	}
+
 }

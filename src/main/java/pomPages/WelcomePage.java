@@ -6,9 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class WelcomePage {
-
 	// Declaration
-	@FindBy(name = "loginBtn")
+	@FindBy(id = "loginBtn")
 	private WebElement loginButton;
 
 	// Initialization
